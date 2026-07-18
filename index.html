@@ -41,28 +41,35 @@
             justify-content: flex-start;
             position: relative;
             
-            /* Cargo's default backdrop color and textured pattern image */
-            background-color: #1a1a1a; 
-            background-image: url("_MG_3692.jpg");
+            /* FIX 1: Loads your custom uploaded backdrop file */
+            background-image: url("backdrop.jpg"); 
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-color: #1a1a1a;
+            
+            /* FIX 2: Switched system font stack to mimic your editor text */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: rgba(255, 255, 255, 0.85);
-            font-family: Arial, sans-serif;
         }
 
         /* ==========================================================================
-           2. RESPONSIBILITY GRID LAYOUT (Replaces Cargo custom tags)
+           2. RESPONSIBILITY GRID LAYOUT
            ========================================================================== */
         .content-main {
             width: 100%;
-            max-width: 1200px;
+            max-width: 100%;
             margin: 0 auto;
-            padding: 2.5rem;
+            padding: 4rem 5rem; /* Matches the loose edge margins from the editor */
         }
 
         .title-text {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
+            font-weight: 500;
             display: block;
             margin-bottom: 2rem;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.2px;
         }
 
         .column-set {
@@ -70,7 +77,6 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             padding-bottom: 1.5rem;
         }
 
@@ -86,8 +92,8 @@
         .column-right a {
             color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
-            margin-left: 2rem;
-            font-size: 1rem;
+            margin-left: 2.5rem;
+            font-size: 1.1rem;
             transition: color 0.2s ease;
         }
 
@@ -97,21 +103,24 @@
         }
 
         /* ==========================================================================
-           3. PORTFOLIO WORK IMAGE BOX
+           3. PORTFOLIO CENTER IMAGE WORKSPACE (The Floating Poster)
            ========================================================================== */
         .artwork-space {
-            margin-top: 4rem;
+            margin-top: 2rem;
             display: flex;
             flex-direction: column;
-            gap: 3rem;
             align-items: center;
+            justify-content: center;
             width: 100%;
+            min-height: 50vh;
         }
 
         .artwork-space img {
-            max-width: 100%;
+            max-width: 320px; /* Limits the poster size to look exactly like the screenshot */
+            width: 100%;
             height: auto;
             display: block;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Soft shadow depth */
         }
     </style>
 </head>
@@ -120,14 +129,11 @@
     <!-- Outer Site Wrapper -->
     <main class="content-main">
 
-        <!-- Website Structural Top Header -->
-        <span class="title-text">ladananany work</span>
-
         <!-- Web Browser Readable Column Layout Row -->
         <div class="column-set">
             
-            <!-- Structural cushion spacer -->
-            <div class="column-left"></div>
+            <!-- Top Header Title -->
+            <span class="title-text">ladananany work</span>
             
             <!-- Navigation Links -->
             <div class="column-right">
@@ -138,10 +144,9 @@
 
         </div>
 
-        <!-- Portfolio Image Container -->
+        <!-- FIX 4: Replicates the centered artwork poster layer -->
         <section class="artwork-space">
-            <!-- Paste your local backdrop image or portfolio pieces here when you upload them to GitHub -->
-            <!-- Example: <img src="myphoto.jpg" alt="Description"> -->
+            <img src="poster.jpg" alt="Artwork Display">
         </section>
 
     </main>
