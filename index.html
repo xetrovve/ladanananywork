@@ -1,76 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ladananany Work</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ladananany</title>
+
     <style>
-        /* Base styles matching your look */
-        body {
-            background-color: #1a1a1a; /* Dark background to see the white text */
-            font-family: Arial, sans-serif;
+        /* ==========================================================================
+           1. CARGO CORE & SYSTEM VARIABLES
+           ========================================================================== */
+        :root {
+            --base-size: 12.6592px;
+            --viewport-height: 100vh;
+            --baseColor-accent: #FF0000;
+            --baseColor-accent-rgb: 255, 0, 0;
+            --baseColor-accent-reverse-rgb: 255, 255, 255;
+            --text-color: rgba(255, 255, 255, 0.85);
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
-        /* The container holding your text */
+        :focus {
+            outline: 0;
+        }
+
+        /* ==========================================================================
+           2. GLOBAL BODY & ACCESSIBILITY FORMATTING
+           ========================================================================== */
+        html, body {
+            min-height: var(--viewport-height);
+            font-size: var(--base-size);
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a; /* Replaces default white so light text is visible */
+            color: var(--text-color);
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ==========================================================================
+           3. BRUTALIST STRUCTURE & ROW LAYOUT (Replaces Cargo custom columns)
+           ========================================================================== */
+        .content-wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem;
+        }
+
         .title-text {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 1rem;
-            margin-bottom: 15px;
+            font-size: 1.2rem;
+            letter-spacing: -0.5px;
             display: block;
+            margin-bottom: 2rem;
         }
 
-        /* The row layout replacing <column-set> */
+        /* Standard Flexbox Grid Layout */
         .column-set {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            gap: 1rem; /* Replicates your gutter="1" */
+            gap: 1.5rem;
+            width: 100%;
         }
 
-        /* Left column spacing replacing <column-unit span="5"> */
+        /* Blank structural push unit */
         .column-left {
             flex: 5;
         }
 
-        /* Right column layout replacing <column-unit span="7"> */
+        /* Right side link menu styling */
         .column-right {
             flex: 7;
             text-align: right;
         }
 
-        /* Links styling */
         .column-right a {
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-color);
             text-decoration: none;
-            margin-left: 20px; /* Replicates your &nbsp; spacing */
+            margin-left: 2rem;
+            transition: color 0.2s ease;
         }
 
         .column-right a:hover {
             text-decoration: underline;
+            color: #ffffff;
+        }
+
+        /* ==========================================================================
+           4. GALLERY CONTAINER FOR IMAGES
+           ========================================================================== */
+        .image-gallery {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            display: block;
         }
     </style>
 </head>
 <body>
 
-    <!-- Main Title -->
-    <span class="title-text">ladananany work</span>
+    <!-- Main Container Boundary -->
+    <main class="content-wrapper">
 
-    <!-- Navigation Grid Row -->
-    <div class="column-set">
-        
-        <!-- Left empty space unit -->
-        <div class="column-left"></div>
-        
-        <!-- Right link unit -->
-        <div class="column-right">
-            <a href="information.html">Information</a> 
-            <a href="https://www.instagram.com/ladananany/" target="_blank">Instagram</a> 
-            <a href="evvortexmusic.com">Email</a>
+        <!-- Top Header Heading Block -->
+        <span class="title-text">ladananany work</span>
+
+        <!-- Structural Navigation Grid Row -->
+        <div class="column-set">
+            
+            <!-- Left grid cushion unit -->
+            <div class="column-left"></div>
+            
+            <!-- Right text link cluster -->
+            <div class="column-right">
+                <a href="information.html">Information</a> 
+                <a href="https://instagram.com" target="_blank">Instagram</a> 
+                <a href="contact-form.html">Email</a>
+            </div>
+
         </div>
 
-    </div>
+        <!-- Embedded Asset Artwork Space -->
+        <section class="image-gallery">
+            <!-- Paste your image links below as you upload them to GitHub -->
+            <!-- <img src="artwork1.jpg" alt="Portfolio Image Description"> -->
+        </section>
+
+    </main>
 
 </body>
 </html>
