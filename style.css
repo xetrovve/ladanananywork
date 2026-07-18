@@ -1,0 +1,15 @@
+[id="G4282622397"] .page-content {
+	text-align: left;
+	box-shadow: 0rem 2.5rem 1.5rem -1.5rem #ffffff inset;
+	padding-bottom: 4rem;
+}
+
+[id="G4282622397"].page {
+	justify-content: flex-start;
+	min-height: auto;
+}
+
+[id="G4282622397"] .page-layout {
+	max-width: 100%;
+	align-items: flex-start;
+}
