@@ -1,1 +1,76 @@
-<br><span style="color: rgba(255, 255, 255, 0.85);">ladananany work</span><column-set gutter="1" mobile-stack="false"><column-unit slot="0" span="5"></column-unit><column-unit slot="1" span="7"><div style="text-align: right;"><span style="color: rgba(255, 255, 255, 0.85);"><a href="information" rel="history">Information</a> &nbsp; &nbsp;<a href="https://www.instagram.com/cargoworld/" target="_blank">Instagram</a> &nbsp; &nbsp;<a href="contact-form" rel="history">Email</a></span></div></column-unit></column-set>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ladananany Work</title>
+    <style>
+        /* Base styles matching your look */
+        body {
+            background-color: #1a1a1a; /* Dark background to see the white text */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* The container holding your text */
+        .title-text {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* The row layout replacing <column-set> */
+        .column-set {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem; /* Replicates your gutter="1" */
+        }
+
+        /* Left column spacing replacing <column-unit span="5"> */
+        .column-left {
+            flex: 5;
+        }
+
+        /* Right column layout replacing <column-unit span="7"> */
+        .column-right {
+            flex: 7;
+            text-align: right;
+        }
+
+        /* Links styling */
+        .column-right a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            margin-left: 20px; /* Replicates your &nbsp; spacing */
+        }
+
+        .column-right a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Title -->
+    <span class="title-text">ladananany work</span>
+
+    <!-- Navigation Grid Row -->
+    <div class="column-set">
+        
+        <!-- Left empty space unit -->
+        <div class="column-left"></div>
+        
+        <!-- Right link unit -->
+        <div class="column-right">
+            <a href="information.html">Information</a> 
+            <a href="https://www.instagram.com/cargoworld/" target="_blank">Instagram</a> 
+            <a href="contact-form.html">Email</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
