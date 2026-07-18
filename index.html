@@ -1,13 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
-<div class="header-container">
-  <!-- Left Side: Brand Name -->
-  <span class="brand-name">ladananany work</span>
-  
-  <!-- Right Side: Navigation Links -->
-  <nav class="navigation-links">
-    <a href="information" rel="history">Information</a>
-    <a href="https://www.instagram.com/ladananany/" target="_blank">Instagram</a>
-    <a href="contact-form" rel="history">Email</a>
-  </nav>
-</div>
+<html lang="en" style="--base-size: 12.659200488281252px; --viewport-height: 100vh;">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ladananany</title>
+    
+    <style>
+        /* ==========================================================================
+           1. CARGO CORE FRAMEWORK STYLES
+           ========================================================================== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        :focus {
+            outline: 0;
+        }
+        
+        html, body {
+            min-height: var(--viewport-height, 100vh);
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            font-size: var(--base-size);
+            touch-action: manipulation;
+            position: relative;
+        }
+        
+        body {
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: var(--viewport-height, 100vh);
+            justify-content: flex-start;
+            position: relative;
+            
+            /* Cargo's default backdrop color and textured pattern image */
+            background-color: #1a1a1a; 
+            background-image: url("https://static.cargo.site/assets/C3/images/noise.png");
+            color: rgba(255, 255, 255, 0.85);
+            font-family: Arial, sans-serif;
+        }
+
+        /* ==========================================================================
+           2. RESPONSIBILITY GRID LAYOUT (Replaces Cargo custom tags)
+           ========================================================================== */
+        .content-main {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2.5rem;
+        }
+
+        .title-text {
+            font-size: 1.25rem;
+            display: block;
+            margin-bottom: 2rem;
+            letter-spacing: -0.3px;
+        }
+
+        .column-set {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 1.5rem;
+        }
+
+        .column-left {
+            flex: 5;
+        }
+
+        .column-right {
+            flex: 7;
+            text-align: right;
+        }
+
+        .column-right a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+        }
+
+        .column-right a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        /* ==========================================================================
+           3. PORTFOLIO WORK IMAGE BOX
+           ========================================================================== */
+        .artwork-space {
+            margin-top: 4rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: center;
+            width: 100%;
+        }
+
+        .artwork-space img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Outer Site Wrapper -->
+    <main class="content-main">
+
+        <!-- Website Structural Top Header -->
+        <span class="title-text">ladananany work</span>
+
+        <!-- Web Browser Readable Column Layout Row -->
+        <div class="column-set">
+            
+            <!-- Structural cushion spacer -->
+            <div class="column-left"></div>
+            
+            <!-- Navigation Links -->
+            <div class="column-right">
+                <a href="information.html">Information</a> 
+                <a href="https://instagram.com" target="_blank">Instagram</a> 
+                <a href="contact-form.html">Email</a>
+            </div>
+
+        </div>
+
+        <!-- Portfolio Image Container -->
+        <section class="artwork-space">
+            <!-- Paste your local backdrop image or portfolio pieces here when you upload them to GitHub -->
+            <!-- Example: <img src="myphoto.jpg" alt="Description"> -->
+        </section>
+
+    </main>
+
+</body>
+</html>
